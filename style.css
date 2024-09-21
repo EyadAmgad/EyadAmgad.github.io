@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.contact-info {
+    margin-top: 0.5em;
+}
+
+.contact-info a {
+    color: white;
+    text-decoration: none;
+    margin: 0 0.5em;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+.linkedin {
+    color: #0A66C2;
+}
+
+.github {
+    color: #333;
+}
+
+section {
+    padding: 2em;
+}
+
+h2 {
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5em;
+}
+
+h3 {
+    margin: 0;
+    padding: 0.5em 0;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 1.5em;
+}
+
+ul li {
+    margin-bottom: 0.5em;
+}
+
+.education-item, .experience-item, .project-item {
+    margin-bottom: 1.5em;
+}
+
+footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
