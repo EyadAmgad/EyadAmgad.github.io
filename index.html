@@ -2,38 +2,542 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Eyad Amgad | ML Engineer</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eyad's Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 <body>
-  <header>
-    <h1>Eyad Amgad</h1>
-    <p>Machine Learning Engineer | Data Science</p>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-brand">EA</div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <header id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="greeting animate-fade-in">Hello, I'm</p>
+        <h1 class="name animate-slide-up">Eyad Amgad</h1>
+        <div class="typing-container">
+          <span class="static-text">I'm a </span>
+          <span class="dynamic-text" id="typed-text"></span>
+          <span class="cursor">|</span>
+        </div>
+        <p class="tagline animate-fade-in-delay">Building intelligent systems that make a difference</p>
+        <div class="hero-buttons animate-fade-in-delay2">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
+        </div>
+        <div class="social-links animate-fade-in-delay2">
+          <a href="https://github.com/EyadAmgad" target="_blank" class="social-icon" title="GitHub">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/eyad-amgad-529858251" target="_blank" class="social-icon" title="LinkedIn">
+            <i class="fab fa-linkedin"></i>
+          </a>
+          <a href="https://wa.me/+201102950270" target="_blank" class="social-icon" title="WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="mailto:eyadamgad43210@gmail.com" class="social-icon" title="Email">
+            <i class="fas fa-envelope"></i>
+          </a>
+        </div>
+      </div>
+      <div class="hero-image animate-float">
+        <div class="profile-circle">
+          <img src="assets/profile.jpeg" alt="Eyad Amgad" class="profile-img">
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <a href="#about">
+        <i class="fas fa-chevron-down"></i>
+      </a>
+    </div>
   </header>
 
-  <section>
-    <h2>About Me</h2>
-    <p>
-      Computer Engineering student focused on Machine Learning,
-      Deep Learning, and real-world AI systems.
-    </p>
+  <!-- About Section -->
+  <section id="about" class="about section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">01.</span> About Me
+      </h2>
+      <div class="about-content">
+        <div class="about-text fade-in-section">
+          <p>
+            I'm a <strong>Computer Engineering graduate</strong> focused on building 
+            <strong>practical machine learning </strong>and <strong>AI systems </strong> I work primarily with Python and modern ML stacks, including PyTorch, TensorFlow, scikit-learn, NumPy, and Pandas, with hands-on experience designing and modifying CNN architectures such as AlexNet and VGG.
+          </p>
+          <p>
+I build LLM-powered and RAG-based applications using sentence-transformer embeddings, vector similarity search, and LangChain for prompt orchestration, memory management, and tool usage. I have implemented end-to-end AI chatbots, including a Tour Guide system, with clean, modular pipelines.
+          </p>
+          <p>
+On the engineering side, I develop backend services using Django and FastAPI, design microservices architectures, and work extensively with PostgreSQL and SQL. I use Docker for containerization, MLflow for experiment tracking, and Streamlit for deploying interactive ML applications.
+          </p>
+          <p>
+            I also have experience in data engineering and BI, working with structured data pipelines, transformations, and analytics-ready datasets. I build dashboards and reports, write analytical SQL queries, and integrate automation workflows using n8n to connect data sources, AI services, and business processes.
+          </p>
+        </div>
+        <div class="about-stats fade-in-section">
+          <div class="stat-card">
+            <span class="stat-number" data-target="10">0</span>+
+            <span class="stat-label">Projects Completed</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="5">0</span>+
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-number" data-target="2">0</span>+
+            <span class="stat-label">Years Learning</span>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Projects</h2>
-    <ul>
-      <li>RAG-based Egyptian Tour Guide Chatbot</li>
-      <li>Depth Estimation using MiDaS</li>
-      <li>AlexNet vs VGG on CIFAR-10</li>
-    </ul>
+  <!-- Skills Section -->
+  <section id="skills" class="skills section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">02.</span> Skills & Technologies
+      </h2>
+      <div class="skills-grid">
+        <!-- Programming Languages -->
+        <div class="skill-category fade-in-section">
+          <h3><i class="fas fa-code"></i> Programming Languages</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+              <span>Python</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg" alt="C++">
+              <span>C++</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+              <span>Java</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript">
+              <span>JavaScript</span>
+            </div>
+          </div>
+        </div>
+        <!-- ML/DL Frameworks -->
+        <div class="skill-category fade-in-section">
+          <h3><i class="fas fa-brain"></i> ML/DL Frameworks</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tensorflow/tensorflow-original.svg" alt="TensorFlow">
+              <span>TensorFlow</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pytorch/pytorch-original.svg" alt="PyTorch">
+              <span>PyTorch</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="Scikit-learn">
+              <span>Scikit-learn</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://avatars.githubusercontent.com/u/126733545?s=200&v=4" alt="LangChain">
+              <span>LangChain</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://avatars.githubusercontent.com/u/170677839?s=200&v=4" alt="CrewAI">
+              <span>CrewAI</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- MLOps & APIs -->
+        <div class="skill-category fade-in-section">
+          <h3><i class="fas fa-server"></i> MLOps & APIs</h3>
+          <div class="skill-items">
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/fastapi/fastapi-original.svg" alt="FastAPI">
+              <span>FastAPI</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://avatars.githubusercontent.com/u/39938107?s=200&v=4" alt="MLflow">
+              <span>MLflow</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker">
+              <span>Docker</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apacheairflow/apacheairflow-original.svg" alt="Airflow">
+              <span>Airflow</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Data & Tools -->
+        <div class="skill-category fade-in-section">
+          <h3><i class="fas fa-database"></i> Data & Tools</h3>
+          <div class="skill-items">
+                <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postgresql/postgresql-original.svg" alt="PostgreSQL">
+              <span>PostgreSQL</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/pandas/pandas-original.svg" alt="Pandas">
+              <span>Pandas</span>
+            </div>
+
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/numpy/numpy-original.svg" alt="NumPy">
+              <span>NumPy</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git">
+              <span>Git</span>
+            </div>
+            <div class="skill-item">
+              <img src="https://avatars.githubusercontent.com/u/45487711?s=200&v=4" alt="n8n">
+              <span>n8n</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section>
-    <h2>Contact</h2>
-    <p>
-      GitHub: <a href="https://github.com/EyadAmgad">EyadAmgad</a><br>
-      LinkedIn: <a href="#">Your LinkedIn</a>
-    </p>
+ <section id="experience" class="experience section">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="title-number">03.</span> Experience
+    </h2>
+
+    <div class="timeline">
+
+      <!-- BI Developer Intern -->
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Aug - Sep 2025</div>
+          <h3>BI Developer / Data Analyst Intern</h3>
+          <h4>Business Intelligence & Data Engineering</h4>
+          <ul>
+            <li>Designed and maintained <strong>SQL-based data models</strong> to support analytics and reporting use cases.</li>
+            <li>Built <strong>BI dashboards and analytical reports</strong> for tracking KPIs and business performance.</li>
+            <li>Performed data cleaning, transformation, and aggregation to create <strong>analytics-ready datasets</strong>.</li>
+            <li>Automated reporting and data workflows using <strong>Airflow</strong>, integrating databases and analytics tools.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>SQL</span>
+            <span>PowerBI</span>
+            <span>Tableau</span>
+            <span>ETL</span>
+            <span>Data Modeling</span>
+            <span>Airflow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- ML Engineer Intern -->
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">Apr - Oct 2024</div>
+          <h3>Machine Learning Engineer Intern</h3>
+          <h4>Applied AI & Machine Learning</h4>
+          <ul>
+            <li>Built and evaluated <strong>machine learning and deep learning models</strong> using Python and modern ML frameworks.</li>
+            <li>Supported deployment of ML services through <strong>APIs</strong> and containerized environments.</li>
+            <li>Applied MLOps practices using MLflow to track and manage 4+ experiments.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Python</span>
+            <span>PyTorch</span>
+            <span>TensorFlow</span>
+            <span>Pandas</span>
+            <span>Seaborn</span>
+            <span>MLflow</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Projects -->
+      <div class="timeline-item fade-in-section">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-date">2023 – Present</div>
+          <h3>Machine Learning & AI Projects</h3>
+          <h4>Personal & Academic Projects</h4>
+          <ul>
+            <li>Built <strong>end-to-end ML and AI applications</strong>, including RAG-based chatbots and computer vision systems.</li>
+            <li>Developed backend services using <strong>Django and FastAPI</strong> to serve ML models.</li>
+            <li>Containerized applications with <strong>Docker</strong> and deployed interactive demos using <strong>Streamlit</strong>.</li>
+            <li>Developed <strong>LLM-based and RAG applications</strong>, including chatbot systems with retrieval pipelines.</li>
+            <li>Used <strong>LangChain</strong> for prompt orchestration, memory handling, and tool integration.</li>
+          </ul>
+          <div class="timeline-tags">
+            <span>Django</span>
+            <span>FastAPI</span>
+            <span>RAG</span>
+            <span>PostgreSQL</span>
+            <span>LangChain</span>
+            <span>n8n</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">04.</span> Featured Projects
+      </h2>
+      <div class="projects-grid">
+        <!-- Project 1: EduMentorAI -->
+        <div class="project-card fade-in-section">
+          <div class="project-image">
+            <img src="assets/edumentor.jpg" alt="EduMentorAI">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/EyadAmgad/EduMentorAI" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://edumentorai-edumentorai.hf.space/" target="_blank" class="project-link" title="Live Demo">
+                  <i class="fas fa-external-link-alt"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>EduMentorAI: Personalized Learning Platform</h3>
+            <p>
+              Built a Django + REST API platform integrating RAG and LLMs for personalized learning support. 
+              Features quiz generation, content recommendations, student progress tracking, and an AI-powered 
+              slide generator using LLM summarization and Markdown-to-PPT conversion.
+            </p>
+            <div class="project-tech">
+              <span>Django</span>
+              <span>LangChain</span>
+              <span>LLM</span>
+              <span>RAG</span>
+              <span>AI Agents</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Adidas Sales Pipeline -->
+        <div class="project-card fade-in-section">
+          <div class="project-image">
+            <img src="assets/adidas.jpeg" alt="Adidas Sales Pipeline">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/EyadAmgad/Adidas_Workflow" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Adidas Sales Data Pipeline & Analytics Dashboard</h3>
+            <p>
+              End-to-end ETL pipeline processing 10K+ sales records with automated cleaning and loading into PostgreSQL. 
+              Containerized with Docker Compose, features star schema data warehouse and interactive Tableau dashboard 
+              for sales trends and profitability insights.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>PostgreSQL</span>
+              <span>SQLAlchemy</span>
+              <span>Docker</span>
+              <span>Tableau</span>
+              <span>ETL</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Arabic Sign Language -->
+        <div class="project-card fade-in-section">
+          <div class="project-image">
+            <img src="assets/Arsal.png" alt="Arabic Sign Language Recognition">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/EyadAmgad/pbl" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Arabic Sign-Language Recognition</h3>
+            <p>
+              Achieved 91% accuracy on the KArSL dataset for recognizing Arabic Sign Language 
+              (letters, numbers, and 18 verbs). Built real-time gesture recognition using 
+              deep learning with CNN + LSTM architecture.
+            </p>
+            <div class="project-tech">
+              <span>OpenCV</span>
+              <span>TensorFlow</span>
+              <span>LSTM</span>
+              <span>CNN</span>
+              <span>Python</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: CourTera -->
+        <div class="project-card fade-in-section">
+          <div class="project-image">
+            <img src="assets/courtera.png" alt="CourTera">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/EyadAmgad/CourTera" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>CourTera: Online Course Platform with Sentiment Analysis</h3>
+            <p>
+              Full-stack Django platform with authentication, enrollment, and course delivery. 
+              Integrated a BERT model for sentiment-based star ratings on student reviews, 
+              enhancing the learning experience with AI-driven feedback.
+            </p>
+            <div class="project-tech">
+              <span>Django</span>
+              <span>BERT</span>
+              <span>SQLite</span>
+              <span>JavaScript</span>
+              <span>NLP</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Real-Time Depth Estimation -->
+        <div class="project-card fade-in-section">
+          <div class="project-image">
+            <img src="assets/midas.jpg" alt="Depth Estimation">
+            <div class="project-overlay">
+              <div class="project-links">
+                <a href="https://github.com/EyadAmgad/depth_estimation" target="_blank" class="project-link" title="View Code">
+                  <i class="fab fa-github"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="project-info">
+            <h3>Real-Time Depth Estimation (MiDaS)</h3>
+            <p>
+              Real-time monocular depth estimation app using MiDaS and webcam input. 
+              Deployed via Streamlit with side-by-side RGB/depth visualization 
+              achieving 200ms latency for smooth real-time performance.
+            </p>
+            <div class="project-tech">
+              <span>Python</span>
+              <span>OpenCV</span>
+              <span>PyTorch</span>
+              <span>Streamlit</span>
+              <span>MiDaS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view-more fade-in-section">
+        <a href="https://github.com/EyadAmgad" target="_blank" class="btn btn-outline">
+          <i class="fab fa-github"></i> View More on GitHub
+        </a>
+      </div>
+    </div>
   </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <h2 class="section-title">
+        <span class="title-number">05.</span> Get In Touch
+      </h2>
+      <div class="contact-content fade-in-section">
+        <div class="contact-text">
+          <p>
+            I'm currently open to new opportunities and collaborations. 
+            Whether you have a project in mind, want to discuss AI/ML, 
+            or just want to say hi, feel free to reach out!
+          </p>
+        </div>
+        <div class="contact-cards">
+          <a href="mailto:eyadamgad43210@gmail.com" class="contact-card">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h3>Email</h3>
+            <p>eyadamgad43210@gmail.com</p>
+          </a>
+          <a href="https://linkedin.com/in/eyad-amgad-529858251" target="_blank" class="contact-card">
+            <div class="contact-icon linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </div>
+            <h3>LinkedIn</h3>
+            <p>Connect with me</p>
+          </a>
+          <a href="https://wa.me/+201102950270" target="_blank" class="contact-card">
+            <div class="contact-icon whatsapp">
+              <i class="fab fa-whatsapp"></i>
+            </div>
+            <h3>WhatsApp</h3>
+            <p>Send a message</p>
+          </a>
+          <a href="https://github.com/EyadAmgad" target="_blank" class="contact-card">
+            <div class="contact-icon github">
+              <i class="fab fa-github"></i>
+            </div>
+            <h3>GitHub</h3>
+            <p>Check my repos</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+      <div class="footer-content">
+          <div class="container">   
+        <p>Designed & Built by <strong>Eyad Amgad</strong></p>
+        <p class="footer-year">© <span id="year"></span> All Rights Reserved</p>
+      </div>
+      <div class="footer-social">
+        <a href="https://github.com/EyadAmgad" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com/in/eyad-amgad-529858251" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://wa.me/+201102950270" target="_blank"><i class="fab fa-whatsapp"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" title="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
