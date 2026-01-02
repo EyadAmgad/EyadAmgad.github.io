@@ -13,6 +13,7 @@ let isDeleting = false;
 let typingSpeed = 100;
 
 function typeEffect() {
+  if (!typedText) return;
   const currentPhrase = phrases[phraseIndex];
   
   if (isDeleting) {
@@ -39,7 +40,9 @@ function typeEffect() {
 
 // Start typing animation
 document.addEventListener('DOMContentLoaded', () => {
-  setTimeout(typeEffect, 1000);
+  if (typedText) {
+    setTimeout(typeEffect, 1000);
+  }
 });
 
 // ===== Navbar Scroll Effect =====
@@ -48,11 +51,11 @@ const backToTop = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
   if (window.scrollY > 100) {
-    navbar.classList.add('scrolled');
-    backToTop.classList.add('visible');
+    if (navbar) navbar.classList.add('scrolled');
+    if (backToTop) backToTop.classList.add('visible');
   } else {
-    navbar.classList.remove('scrolled');
-    backToTop.classList.remove('visible');
+    if (navbar) navbar.classList.remove('scrolled');
+    if (backToTop) backToTop.classList.remove('visible');
   }
 });
 
@@ -60,16 +63,18 @@ window.addEventListener('scroll', () => {
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
 
-hamburger.addEventListener('click', () => {
-  hamburger.classList.toggle('active');
-  navLinks.classList.toggle('active');
-});
+if (hamburger) {
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    if (navLinks) navLinks.classList.toggle('active');
+  });
+}
 
 // Close mobile menu when clicking a link
 document.querySelectorAll('.nav-links a').forEach(link => {
   link.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
+    if (navLinks) navLinks.classList.remove('active');
   });
 });
 
@@ -92,12 +97,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===== Back to Top Button =====
-backToTop.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
+if (backToTop) {
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   });
-});
+}
 
 // ===== Scroll Reveal Animation =====
 const observerOptions = {
@@ -210,7 +217,10 @@ document.querySelectorAll('.project-card').forEach(card => {
 });
 
 // ===== Dynamic Year in Footer =====
-document.getElementById('year').textContent = new Date().getFullYear();
+const yearElement = document.getElementById('year');
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
 // ===== Parallax Effect for Hero Background =====
 window.addEventListener('scroll', () => {
@@ -269,8 +279,8 @@ document.addEventListener('mousemove', (e) => {
 // ===== Keyboard Navigation =====
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape') {
-    hamburger.classList.remove('active');
-    navLinks.classList.remove('active');
+    if (hamburger) hamburger.classList.remove('active');
+    if (navLinks) navLinks.classList.remove('active');
   }
 });
 
